@@ -1,12 +1,16 @@
-const prompt = require("prompt-sync")();
-console.log("Média aritmética");
-let ar = [];
-let n = Number(prompt("Digite um número: "));
-while (n !== 0) {
-  ar.push(n);
-  n = Number(prompt("Digite outro número ou zero para sair: "));
-}
-let ave = ar.reduce((acum, elem) => acum + elem);
-console.log(`Seus números: ${ar}`);
-console.log(`Soma total do array: ${ave}`);
-console.log(`A média aritmética é: ${ave / ar.length}`);
+console.log("Exercício 15");
+let transacoes = [
+  { tipo: "entrada", valor: 10 },
+  { tipo: "entrada", valor: 30 },
+  { tipo: "saida", valor: 5 },
+  { tipo: "saida", valor: 10 },
+];
+let saldoFinal = 0;
+transacoes.forEach((element) => {
+  if (element.tipo === "entrada") {
+    saldoFinal += element.valor;
+  } else {
+    saldoFinal -= element.valor;
+  }
+});
+console.log(saldoFinal);
