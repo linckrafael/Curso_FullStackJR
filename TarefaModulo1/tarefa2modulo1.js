@@ -1,3 +1,5 @@
+// NOTA: Para fazer rodar é preciso instalar o nodejs no computador
+
 // Manipulação de Objetos
 // 1. Acessando Propriedades de Objetos
 // ○ Objetivo: Crie um objeto carro com propriedades como marca, modelo,
