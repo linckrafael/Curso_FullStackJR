@@ -1,0 +1,46 @@
+<!-- 
+ 1. Crie um botão que ao ser clicado, altere o texto na pagina apos 3 segundos(usando setTimeout)
+2.  Adicione outro botão que exiba um contador que atualiza a cada segundo (setInterval)
+3. Crie um bota voltar e avançar que utilizam o historico do navegador (usando window.history.back() e o window.history.foward()) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio BOM</title>
+    <script>
+      function changeText() {
+        window.setTimeout(() => {
+          document.write("TEXTO MUDOU DEPOIS DE 3S");
+        }, 3000);
+      }
+      let i = 1;
+      function startTime() {
+        let j = window.setInterval(() => {
+          document.write(`${i} <br>`);
+          i++;
+          if (i === 11) {
+            clearInterval(j);
+            document.write("fim da contagem");
+          }
+        }, 1000);
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="text">OLA</h1>
+    <button onclick="changeText()">Muda Texto</button>
+    <button onclick="startTime()">Inicia contador</button>
+    <button onclick="goBack()">Voltar</button>
+    <button onclick="goFoward()">Avançar</button>
+  </body>
+</html>

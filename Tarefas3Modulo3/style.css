@@ -1,0 +1,55 @@
+* {
+  background-color: black;
+  color: yellow;
+}
+
+header {
+  text-align: center;
+}
+
+header a {
+  margin-right: 25px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  color: red;
+  font-family: "bebas neue";
+}
+
+section {
+  display: grid;
+  grid-template-columns: 70vw 20vw;
+  font-family: "rubik";
+  margin: 3vw;
+}
+
+img {
+  width: 100vw;
+}
+
+a:hover {
+  background-color: rgb(105, 105, 3);
+  border-radius: 15px;
+  padding: 3px;
+}
+
+#menuLateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: solid yellow 1px;
+}
+
+section a {
+  margin-bottom: 13px;
+}
+
+aside h4 {
+  text-align: center;
+}
